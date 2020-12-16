@@ -1,0 +1,7 @@
+grpc:
+    addr: localhost
+    port: 9999
+
+database:
+    addr: localhost
+    port: 3306

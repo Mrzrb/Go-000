@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package api;
+
+option go_package = ".;api";
+
+message Demo
+{
+    int32 id = 1;
+    string blob = 2;
+}
+
+message GetDemoReq
+{
+    string id = 1;
+}
+
+message GetDemoRsp
+{
+    repeated Demo data = 1;
+}
+
+service DemoService
+{
+    rpc Demo(GetDemoReq) returns (GetDemoRsp) {}
+}
